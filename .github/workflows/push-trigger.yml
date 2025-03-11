@@ -109,7 +109,7 @@ jobs:
           - SERVICE_LOCATION: '../mimoto'
             SERVICE_NAME: 'mimoto'
             BUILD_ARTIFACT: 'mimoto-recreated'
-            MULTIARCH: true
+            MULTIARCH: false
             SQUASH_LAYERS: '8'
       fail-fast: false
     uses: bhumi46/kattu/.github/workflows/docker-build.yml@master-java21
