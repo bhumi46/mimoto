@@ -109,6 +109,7 @@ jobs:
           - SERVICE_LOCATION: '../mimoto'
             SERVICE_NAME: 'mimoto'
             BUILD_ARTIFACT: 'mimoto-recreated'
+            MULTIARCH: true
             SQUASH_LAYERS: '8'
       fail-fast: false
     uses: bhumi46/kattu/.github/workflows/docker-build.yml@master-java21
@@ -204,6 +205,7 @@ jobs:
           - SERVICE_LOCATION: 'api-test'
             SERVICE_NAME: 'apitest-mimoto'
             BUILD_ARTIFACT: 'apitest-mimoto-local'
+            MULTIARCH: false
             ONLY_DOCKER: true
       fail-fast: false
     name: ${{ matrix.SERVICE_NAME }}
